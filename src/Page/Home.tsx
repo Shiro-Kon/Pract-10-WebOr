@@ -8,12 +8,12 @@ type Task = {
 
 const Home = (props: Task) => {
 
-    // Створюємо стейт для списку задач
+
   const [tasks, setTasks] = useState<Task[]>([]);
-  // Стейт для нової задачі
+
   const [newTask, setNewTask] = useState<string>('');
 
-  // Функція для додавання нової задачі
+
   const addTask = () => {
     if (newTask.trim() !== '') {
       setTasks([
@@ -28,12 +28,12 @@ const Home = (props: Task) => {
     }
   };
 
-  // Функція для видалення задачі
+
   const deleteTask = (id: number) => {
     setTasks(tasks.filter(task => task.id !== id));
   };
 
-  // Функція для відмітки задачі як виконаної
+ 
   const toggleTask = (id: number) => {
     setTasks(
       tasks.map(task =>
